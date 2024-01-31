@@ -58,7 +58,6 @@ def terms_fibonacci():
          n2 = nth
          count += 1
 
-
 # terms_fibonacci()
          
 
@@ -75,12 +74,53 @@ def count_words_in_sentence():
     word_list = re.split(r"\s+", sentence)
     print(len(word_list))
 
+# count_words_in_sentence()
 
-count_words_in_sentence()
-
-
-
-
+###
+    
 
 
+
+
+def print_factorial_numbers():
+
+    number = input("Insert a number: ")
+    if(not number.isnumeric()):
+        print('Please insert a number')
+        print_factorial_numbers()
+    if (int(number) < 1):
+        print('Please insert a number major than 0')
+        return print_factorial_numbers()
+    if(number.isnumeric()):
+      number = int(number)
+      fact = 1
+      for num in range(2, number + 1):
+        fact *= num
+        print(fact)
+      return fact
+    else:
+        print('Please insert a number')
+        print_factorial_numbers()
+
+num = print_factorial_numbers()
+
+print("Result of factorial: ", num)
+
+### 
+        
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n-1)
+    
+# print(factorial(10))
+
+def factorial2(n):
+    fact = 1
+    for num in range(2, n + 1):
+        fact *= num
+    return fact
+
+# print(factorial2(5))
 
